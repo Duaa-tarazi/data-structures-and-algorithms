@@ -102,8 +102,17 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  addValues(num, arr);
-  speaker(times, callback);
+
+  arr.push(value);
+};
+
+
+const addNumbers = (num, arr, times, callback) => {
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
