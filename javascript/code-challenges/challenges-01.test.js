@@ -9,9 +9,9 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArr=[];
+  let newArr = [];
   arr.forEach(element => {
-    newArr.push(element+1);
+    newArr.push(element + 1);
 
   });
   return newArr;
@@ -26,9 +26,9 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  let newArr=[];
+  let newArr = [];
   arr.forEach(element => {
-    newArr.push(element+'!');
+    newArr.push(element + '!');
 
   });
   return newArr;
@@ -43,12 +43,12 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  let newArr=[];
+  let newArr = [];
   arr.forEach(element => {
     newArr.push(element.toUpperCase());
 
   });
-  const str=newArr.toString();
+  const str = newArr.toString();
   return str;
 };
 
@@ -64,16 +64,16 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   const upperword = allUpperCase(word);
-  const upperwordwithEx =addExclamation(upperword);
+  const upperwordwithEx = addExclamation(upperword);
 
 
   return upperwordwithEx;
 };
 
 const speaker = (words, callback) => {
-  const result=[];
-  words.forEach(word=>{
-    const newword=callback(word);
+  const result = [];
+  words.forEach(word => {
+    const newword = callback(word);
     result.push(newword);
   });
   return result;
@@ -102,7 +102,8 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  addValues(num, arr);
+  speaker(times, callback);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,11 +121,17 @@ The inventory is formatted like this:
   { name: 'blueberries', available: false }
 ]
 
-This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
+This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list.
+ Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const inventory = [];
+  inventory.forEach(isItAvailable);
+  function isItAvailable(name, availableItems) {
+    if(inventory.available===true){
+    inventory.push(name);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
