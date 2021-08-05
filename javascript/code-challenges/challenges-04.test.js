@@ -10,14 +10,7 @@ This function should first create a new array. Then iterate over the input array
 Push each updated animal string into the new array. Return the new array.
 
 HINT: Look at the tests to see how the callback functions are used.
------------------------------------
 
-describe('Testing challenge 1', () => {
-  test('It should return an array of uppercase animal names', () => {
-    const arr = ['BeAr', 'lIon'];
-    expect(updateAnimal(arr, upper)[0]).toStrictEqual('BEAR');
-    expect(updateAnimal(arr, upper)[1]).toStrictEqual('LION');
-  });
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -30,11 +23,11 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  const addAnimal=(arr,callback)=>{
-    let arr=[];
-    arr.map
-  }
-  
+  var newArr=[];
+  arr.map(item=>{
+    newArr.push(callback(item));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,19 +39,8 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  var arrOfNames=[];
-  arrOfNames.sort(function(a, b) {
-    
-    if (a < b) {
-      return -1;
-    }
-    if (a> b) {
-      return 1;
-    }
-      return 0;
-  });
-  
-
+  arr.sort();
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,41 +52,28 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  var arrOfNumbers=[];
-  arrOfNumbers.sort(function(a, b) {
-    
-    if (a < b) {
-      return -1;
-    }
-    if (a> b) {
-      return 1;
-    }
-      return 0;
-  });
+  arr.sort((a,b)=>(a<b?1:-1));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, largest to smallest.
 
-HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
+Write a function named sortBackwards that takes in
+ an array of numbers and returns the same array, with the
+  numbers sorted, largest to smallest.
+
+HINT: Do it with a custom sort callback, not with using
+`.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  var arrOfNumbers=[];
-  arrOfNumbers.sort(function(b, a) {
-    
-    if (a < b) {
-      return -1;
-    }
-    if (a> b) {
-      return 1;
-    }
-      return 0;
-  });
-  
+  arr.sort((a,b)=>(a<b?1 :-1));
+  return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -117,25 +86,25 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  var arrOfNames=[];
-  arrOfNames.sort(function(a, b) {
-    
-    if (a < b) {
-      return -1;
-    }
-    if (a> b) {
+  let newArr=arr.sort((a,b) => {
+    if (a>b){
       return 1;
     }
+    else if (a<b){
+      return -1;
+    }
+    else{
       return 0;
+    }
   });
-};
+  return newArr;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
+
 Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property,
  and sorts those objects by price, lowest to highest, returning the same array.
-
 Here is an example of the input:
 [
   {name: 'Sweatshirt', price: 45},
@@ -145,18 +114,8 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  var items=[];
-items.sort(function(b, a) {
-  var nameA = a.value;
-  var nameB = b.value;
-  if (nameA > nameB) {
-    return -1;
-  }
-  if (nameA < nameB) {
-    return 1;
-  }
-  return 0;
-});
+  arr.sort((a,b) =>(a.price< b.price ?-1: 1));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
