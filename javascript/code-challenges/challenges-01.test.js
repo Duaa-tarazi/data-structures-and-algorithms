@@ -9,12 +9,12 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArr = [];
-  arr.forEach(element => {
-    newArr.push(element + 1);
+  // let newArr = [];
+  // arr.forEach(element => {
+  //   newArr.push(element + 1);
 
-  });
-  return newArr;
+  // });
+  // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,12 +26,12 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  let newArr = [];
-  arr.forEach(element => {
-    newArr.push(element + '!');
+  // let newArr = [];
+  // arr.forEach(element => {
+  //   newArr.push(element + '!');
 
-  });
-  return newArr;
+  // });
+  // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,13 +43,13 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  let newArr = [];
-  arr.forEach(element => {
-    newArr.push(element.toUpperCase());
+  // let newArr = [];
+  // arr.forEach(element => {
+  //   newArr.push(element.toUpperCase());
 
-  });
-  const str = newArr.toString();
-  return str;
+  // });
+  // const str = newArr.toString();
+  // return str;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,20 +63,20 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  const upperword = allUpperCase(word);
-  const upperwordwithEx = addExclamation(upperword);
+//   const upperword = allUpperCase(word);
+//   const upperwordwithEx = addExclamation(upperword);
 
 
-  return upperwordwithEx;
-};
+//   return upperwordwithEx;
+// };
 
-const speaker = (words, callback) => {
-  const result = [];
-  words.forEach(word => {
-    const newword = callback(word);
-    result.push(newword);
-  });
-  return result;
+// const speaker = (words, callback) => {
+//   const result = [];
+//   words.forEach(word => {
+//     const newword = callback(word);
+//     result.push(newword);
+//   });
+//   return result;
 
 };
 
@@ -98,12 +98,12 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  arr.push(value);
-};
+//   arr.push(value);
+// };
 
-const addNumbers = (num, arr, times, callback) => {
-  addValues(num, arr);
-  speaker(times, callback);
+// const addNumbers = (num, arr, times, callback) => {
+//   addValues(num, arr);
+//   speaker(times, callback);
 };
 
 /* ------------------------------------------------------------------------------------------------
