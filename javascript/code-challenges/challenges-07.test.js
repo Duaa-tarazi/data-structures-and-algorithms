@@ -8,36 +8,38 @@ Write a function called sortStarWarsCharacters that sorts the characters in the 
 
 let starWarsPeople = [
   {
-    'name': 'C-3PO',
-    'height': '167',
-    'eye_color': 'yellow'
+    "name": "C-3PO",
+    "height": "167",
+    "eye_color": "yellow"
   },
   {
-    'name': 'Luke Skywalker',
-    'height': '172',
-    'eye_color': 'blue'
+    "name": "Luke Skywalker",
+    "height": "172",
+    "eye_color": "blue"
   },
   {
-    'name': 'R2-D2',
-    'height': '96',
-    'eye_color': 'red'
+    "name": "R2-D2",
+    "height": "96",
+    "eye_color": "red"
   }
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
   let shosmo=starWarsArr.sort((a,b)=> b.height-a.height);
   return shosmo;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
+
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // arr.splice(idx,3);
-  // return 3;
+  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +72,6 @@ const howMuchPencil = (str) => {
   for (let item=-1;item<str.length;item ++ ){
     result.push(str.slice(item+1));
   }
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -258,7 +259,9 @@ describe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  });
+
+  })
+
 });
 
 describe('Testing challenge 2', () => {
