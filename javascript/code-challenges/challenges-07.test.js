@@ -8,19 +8,20 @@ Write a function called sortStarWarsCharacters that sorts the characters in the 
 
 let starWarsPeople = [
   {
-    'name': 'C-3PO',
-    'height': '167',
-    'eye_color': 'yellow'
+
+    "name": "C-3PO",
+    "height": "167",
+    "eye_color": "yellow"
   },
   {
-    'name': 'Luke Skywalker',
-    'height': '172',
-    'eye_color': 'blue'
+    "name": "Luke Skywalker",
+    "height": "172",
+    "eye_color": "blue"
   },
   {
-    'name': 'R2-D2',
-    'height': '96',
-    'eye_color': 'red'
+    "name": "R2-D2",
+    "height": "96",
+    "eye_color": "red"
   }
 ];
 
@@ -32,12 +33,12 @@ const sortStarWarsCharacters = (starWarsArr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
+
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // arr.splice(idx,3);
-  // return 3;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
