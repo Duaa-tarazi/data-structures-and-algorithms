@@ -21,12 +21,14 @@ let starWarsPeople = [
     'name': 'R2-D2',
     'height': '96',
     'eye_color': 'red'
+
   }
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
   let shosmo=starWarsArr.sort((a,b)=> b.height-a.height);
   return shosmo;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +40,7 @@ Write a function named removeThree that takes an index and an array. The functio
 const removeThree = (idx, arr) => {
   // arr.splice(idx,3);
   // return 3;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,6 +53,7 @@ const joinArray = (arr) => {
   let shosmo=arr.join();
   shosmo=shosmo.replace(/,/g,' ');
   return shosmo;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +74,7 @@ const howMuchPencil = (str) => {
   for (let item=-1;item<str.length;item ++ ){
     result.push(str.slice(item+1));
   }
+
   return result;
 };
 
@@ -87,6 +92,7 @@ const wordsToCharList = (arr) => {
     shosmo.push(arr.slice(item,item+1));
   }
   return shosmo;
+
 };
 
 
@@ -259,6 +265,7 @@ describe('Testing challenge 1', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
   });
+
 });
 
 describe('Testing challenge 2', () => {
