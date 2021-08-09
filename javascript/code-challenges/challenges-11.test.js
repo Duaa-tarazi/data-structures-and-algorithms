@@ -220,3 +220,4 @@ describe('Testing challenge 6', () => {
     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });
 });
+//add new line for testing 
