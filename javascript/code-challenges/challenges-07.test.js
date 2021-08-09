@@ -8,35 +8,39 @@ Write a function called sortStarWarsCharacters that sorts the characters in the 
 
 let starWarsPeople = [
   {
-    "name": "C-3PO",
-    "height": "167",
-    "eye_color": "yellow"
+    'name': 'C-3PO',
+    'height': '167',
+    'eye_color': 'yellow'
   },
   {
-    "name": "Luke Skywalker",
-    "height": "172",
-    "eye_color": "blue"
+    'name': 'Luke Skywalker',
+    'height': '172',
+    'eye_color': 'blue'
   },
   {
-    "name": "R2-D2",
-    "height": "96",
-    "eye_color": "red"
+    'name': 'R2-D2',
+    'height': '96',
+    'eye_color': 'red'
+
   }
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-function sort((a, b=> { return a.height - b.height; });
-  return starWarsArr;
+  let shosmo=starWarsArr.sort((a,b)=> b.height-a.height);
+  return shosmo;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  // arr.splice(idx,3);
+  // return 3;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +50,10 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+  let shosmo=arr.join();
+  shosmo=shosmo.replace(/,/g,' ');
+  return shosmo;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +71,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let item=-1;item<str.length;item ++ ){
+    result.push(str.slice(item+1));
+  }
+
   return result;
 };
 
@@ -77,7 +87,12 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  let shosmo=[];
+  for (let item=0;item<arr.length;item++){
+    shosmo.push(arr.slice(item,item+1));
+  }
+  return shosmo;
+
 };
 
 
@@ -249,7 +264,8 @@ describe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  })
+  });
+
 });
 
 describe('Testing challenge 2', () => {
